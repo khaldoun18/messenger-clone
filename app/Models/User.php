@@ -29,6 +29,9 @@ class User extends Authenticatable
         return $this->belongsToMany(Group::class,'group_users');
     }
 
+    // public static function getUsersExceptUser(User $exceptUser){
+
+    // }
     /**
      * The attributes that should be hidden for serialization.
      *
