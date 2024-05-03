@@ -20,7 +20,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'avatar',
+        'email_verified_at',
+        'is_admin'
     ];
+
+    public function groups(){
+        return $this->belongsToMany(Group::class,'group_users');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
